@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ArrayOfMovieInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MovieInfo" nillable="true" type="tns:MovieInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMovieInfo" nillable="true" type="tns:ArrayOfMovieInfo" />
+  <xs:complexType name="MovieInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Director" nillable="true" type="tns:Director" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Image" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Length" type="xs:decimal" />
+      <xs:element minOccurs="0" name="License" nillable="true" type="tns:License" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+      <xs:element minOccurs="0" name="ProductionDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="MovieInfo" nillable="true" type="tns:MovieInfo" />
+  <xs:complexType name="Director">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Director" nillable="true" type="tns:Director" />
+  <xs:complexType name="License">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ExpiredDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="StartDate" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="License" nillable="true" type="tns:License" />
+  <xs:complexType name="CinemaHall">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="MoviePlayTimes" nillable="true" type="tns:ArrayOfMoviePlayTime" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="Rows" nillable="true" type="tns:ArrayOfRow" />
+      <xs:element minOccurs="0" name="Title" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="CinemaHall" nillable="true" type="tns:CinemaHall" />
+  <xs:complexType name="ArrayOfMoviePlayTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="MoviePlayTime" nillable="true" type="tns:MoviePlayTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMoviePlayTime" nillable="true" type="tns:ArrayOfMoviePlayTime" />
+  <xs:complexType name="MoviePlayTime">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CinemaHall" nillable="true" type="tns:CinemaHall" />
+      <xs:element minOccurs="0" name="DelayTime" type="xs:int" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="MovieInfo" nillable="true" type="tns:MovieInfo" />
+      <xs:element minOccurs="0" name="StartTime" type="xs:dateTime" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="MoviePlayTime" nillable="true" type="tns:MoviePlayTime" />
+  <xs:complexType name="Row">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Chairs" nillable="true" type="tns:ArrayOfChair" />
+      <xs:element minOccurs="0" name="CinemaHall" nillable="true" type="tns:CinemaHall" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="RowType" nillable="true" type="tns:RowType" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Row" nillable="true" type="tns:Row" />
+  <xs:complexType name="ArrayOfChair">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Chair" nillable="true" type="tns:Chair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChair" nillable="true" type="tns:ArrayOfChair" />
+  <xs:complexType name="Chair">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Number" type="xs:int" />
+      <xs:element minOccurs="0" name="Row" nillable="true" type="tns:Row" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="Chair" nillable="true" type="tns:Chair" />
+  <xs:complexType name="RowType">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Price" type="xs:decimal" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="RowType" nillable="true" type="tns:RowType" />
+  <xs:complexType name="ArrayOfRow">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Row" nillable="true" type="tns:Row" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfRow" nillable="true" type="tns:ArrayOfRow" />
+  <xs:complexType name="Customer">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:User">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Address" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="CityNames" nillable="true" type="tns:CityName" />
+          <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Phone" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Customer" nillable="true" type="tns:Customer" />
+  <xs:complexType name="User">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Birthday" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="LastName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="User" nillable="true" type="tns:User" />
+  <xs:complexType name="CityName">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PostalCode" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="CityName" nillable="true" type="tns:CityName" />
+  <xs:complexType name="ArrayOfLockedChair">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="LockedChair" nillable="true" type="tns:LockedChair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLockedChair" nillable="true" type="tns:ArrayOfLockedChair" />
+  <xs:complexType name="LockedChair">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Char" nillable="true" type="tns:Chair" />
+      <xs:element minOccurs="0" name="Customer" nillable="true" type="tns:Customer" />
+      <xs:element minOccurs="0" name="MoviePlayTime" nillable="true" type="tns:MoviePlayTime" />
+    </xs:sequence>
+    <xs:attribute ref="ser:Id" />
+    <xs:attribute ref="ser:Ref" />
+  </xs:complexType>
+  <xs:element name="LockedChair" nillable="true" type="tns:LockedChair" />
+</xs:schema>

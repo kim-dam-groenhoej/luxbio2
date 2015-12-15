@@ -1,0 +1,106 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+#Index {
+}
+
+    #Index > div:nth-of-type(1) {
+        width: 100%;
+        height: 250px;
+    }
+
+        #Index > div:nth-of-type(1) > div:nth-of-type(1) {
+            height: 250px;
+            width: 250px;
+            margin: 20px 0px 0px 0px;
+            float: left;
+        }
+
+        #Index > div:nth-of-type(1) > div:nth-of-type(2) {
+            height: 250px;
+            width: 400px;
+            float: left;
+        }
+
+            #Index > div:nth-of-type(1) > div:nth-of-type(2) > label {
+                width: 50%;
+                margin: 20px 0px 0px 0px;
+                float: left;
+            }
+
+                #Index > div:nth-of-type(1) > div:nth-of-type(2) > label.time {
+                    width: 10%;
+                    margin: 20px 5px 0px 0px;
+                    float: left;
+                    background-color: green;
+                }
+
+            #Index > div:nth-of-type(1) > div:nth-of-type(2) > select {
+                margin: 20px 0px 0px 0px;
+            }
+
+
+    #Index > div:nth-of-type(2) {
+        width: 100%;
+        height: 250px;
+    }
+
+        #Index > div:nth-of-type(2) > ul {
+            width: 290px;
+            list-style-type: none;
+            margin: auto;
+        }
+
+            #Index > div:nth-of-type(2) > ul li {
+                /*width: 40px;
+                height: 40px;*/
+                float: left;
+            }
+
+input[type="checkbox"] {
+    width: 20px; /*Desired width*/
+    height: 20px; /*Desired height*/
+    margin: 0 5px 0 0;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #696969;
+    border-radius: 1px;
+    box-sizing: border-box;
+    box-sizing: content-box;
+}
+
+    input[type="checkbox"]:checked {
+        background-color: blue;
+    }
+
+input[type="checkbox"].IsOvertime {
+     background-color: yellow;
+}
+input[type="checkbox"].IsReserved {
+    /*background: #ff0000;*/
+     background-color: red;
+}

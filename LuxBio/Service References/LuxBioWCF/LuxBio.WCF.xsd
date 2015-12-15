@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://mycompany.com/LuxBio.WCF" elementFormDefault="qualified" targetNamespace="http://mycompany.com/LuxBio.WCF" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" />
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" />
+  <xs:element name="GetAllMovies">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllMoviesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetAllMoviesResult" nillable="true" type="q1:ArrayOfMovieInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMovie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMovieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetMovieResult" nillable="true" type="q2:MovieInfo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHall">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetHallResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetHallResult" nillable="true" type="q3:CinemaHall" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoviePlayTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoviePlayTimeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetMoviePlayTimeResult" nillable="true" type="q4:MoviePlayTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoviePlayTimes">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetMoviePlayTimesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetMoviePlayTimesResult" nillable="true" type="q5:ArrayOfMoviePlayTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllChairsState">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="moviePlayTime" nillable="true" type="q6:MoviePlayTime" />
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="hall" nillable="true" type="q7:CinemaHall" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetAllChairsStateResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" minOccurs="0" name="GetAllChairsStateResult" nillable="true" type="q8:ArrayOfChair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateReserve">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="moviePlayTime" nillable="true" type="q9:MoviePlayTime" />
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="chairs" nillable="true" type="q10:ArrayOfChair" />
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="customer" nillable="true" type="q11:Customer" />
+        <xs:element minOccurs="0" name="dato" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CreateReserveResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="id" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetCustomerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetCustomerResult" nillable="true" type="q12:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindBestChairs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="moviePlayTime" nillable="true" type="q13:MoviePlayTime" />
+        <xs:element minOccurs="0" name="chairCounts" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindBestChairsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" minOccurs="0" name="FindBestChairsResult" nillable="true" type="q14:ArrayOfChair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedChairs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="movieplaytime" nillable="true" type="q15:MoviePlayTime" />
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="hall" nillable="true" type="q16:CinemaHall" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedChairsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetLockedChairsResult" nillable="true" type="q17:ArrayOfLockedChair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockChairs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="movieplaytime" nillable="true" type="q18:MoviePlayTime" />
+        <xs:element xmlns:q19="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="chairs" nillable="true" type="q19:ArrayOfChair" />
+        <xs:element xmlns:q20="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="customer" nillable="true" type="q20:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="LockChairsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedChairsForUser">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="movieplaytime" nillable="true" type="q21:MoviePlayTime" />
+        <xs:element xmlns:q22="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="customer" nillable="true" type="q22:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLockedChairsForUserResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="GetLockedChairsForUserResult" nillable="true" type="q23:ArrayOfLockedChair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseLocked">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="movieplaytime" nillable="true" type="q24:MoviePlayTime" />
+        <xs:element xmlns:q25="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="chairs" nillable="true" type="q25:ArrayOfChair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseLockedResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseLockedWithCustomer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="movieplaytime" nillable="true" type="q26:MoviePlayTime" />
+        <xs:element xmlns:q27="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="chairs" nillable="true" type="q27:ArrayOfChair" />
+        <xs:element xmlns:q28="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="customer" nillable="true" type="q28:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseLockedWithCustomerResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChairsByFirstSelected">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" minOccurs="0" name="statedChairsFromRow" nillable="true" type="q29:ArrayOfChair" />
+        <xs:element xmlns:q30="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" minOccurs="0" name="selectedChair" nillable="true" type="q30:Chair" />
+        <xs:element xmlns:q31="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="moviePlayTime" nillable="true" type="q31:MoviePlayTime" />
+        <xs:element minOccurs="0" name="chairCount" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindChairsByFirstSelectedResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" minOccurs="0" name="FindChairsByFirstSelectedResult" nillable="true" type="q32:ArrayOfChair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseLockedByTime">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="movieplaytime" nillable="true" type="q33:MoviePlayTime" />
+        <xs:element xmlns:q34="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="chairs" nillable="true" type="q34:ArrayOfChair" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReleaseLockedByTimeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLockedChairs">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="movieplaytime" nillable="true" type="q35:MoviePlayTime" />
+        <xs:element xmlns:q36="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="chairs" nillable="true" type="q36:ArrayOfChair" />
+        <xs:element xmlns:q37="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" minOccurs="0" name="customer" nillable="true" type="q37:Customer" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateLockedChairsResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

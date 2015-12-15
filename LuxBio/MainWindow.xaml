@@ -1,0 +1,108 @@
+﻿<Window x:Class="LuxBio.WindowsApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LuxBio"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="760" Width="1024"
+         WindowStartupLocation="Manual" 
+            Left="200" Top="0">
+
+    <TabControl Name="TabC" HorizontalAlignment="Left" Height="719" VerticalAlignment="Top" Width="1014" Margin="0,10,0,0">
+
+        <TabItem Name="MovieTab" Header="Film" Height="22" Initialized="MovieTab_Initialized">
+            <Grid Background="#FFE5E5E5" Margin="-431,-255,-1,-2">
+                <ListView Name="Movie" Margin="430,263,10,10"  ItemsSource="{Binding Path=movies}" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid Height="190" Width="150">
+                                <Label Name="lblMovieName" Content="{Binding Path=Title}" Margin="0,0,0,20" Height="25" VerticalAlignment="Top"  />
+                                <Image Source="GIF/Testbillede.jpg" Height="100" Width="150" Margin="0,30,0,20" VerticalAlignment="Center" ></Image>
+                                <Button Name="btnRes" Content="Vælg" Height="20" Width="100" VerticalAlignment="Bottom" Click="btnChoosingMovie_Click"/>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="SeatChoise" Header="Sæde valg">
+            <Grid Background="DarkGray">
+
+                <Viewbox Name="SelectedMovie" Margin="0,10,817,511">
+                    <Grid Height="109">
+                        <Label Name="lblMovieName" Content="" Margin="-25,0,-20,0" MaxHeight="25" VerticalAlignment="Top" />
+                        <Image Source="GIF/Testbillede.jpg" Height="61" Margin="-25,25,-20,23" VerticalAlignment="Center" RenderTransformOrigin="0.435,0.438"/>
+                    </Grid>
+                </Viewbox>
+
+                <Grid Name="Seats" Height="150" Width="250">
+
+                    <ListBox Name="lvSeatsContainer" SelectionMode="Multiple"  SelectionChanged="lvSeatsContainer_SelectionChanged" Loaded="lvSeatsContainer_Loaded">
+                        <ListBox.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <Canvas Width="200" Height="100"/>
+                            </ItemsPanelTemplate>
+                        </ListBox.ItemsPanel>
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="Canvas.Left" Value="{Binding MarginLeft}"/>
+                                <Setter Property="Canvas.Top" Value="{Binding MarginTop}"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+
+                                <CheckBox Name="SeatCheckbox" Width="20" IsHitTestVisible="{Binding CheckBoxEnabled}" Height="20" Background="{Binding Color}" IsChecked="{Binding RelativeSource={RelativeSource AncestorType={x:Type ListBoxItem}}, Path=IsSelected}">
+
+                                </CheckBox>
+
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+
+                </Grid>
+
+                <ComboBox Name="SeatCounter" HorizontalAlignment="Left" Margin="846,48,0,0" SelectionChanged="SeatCounter_SelectionChanged"  VerticalAlignment="Top" Width="120">
+                    <ComboBoxItem IsSelected="True">1</ComboBoxItem>
+                    <ComboBoxItem>2</ComboBoxItem>
+                    <ComboBoxItem>3</ComboBoxItem>
+                    <ComboBoxItem>4</ComboBoxItem>
+                    <ComboBoxItem>5</ComboBoxItem>
+                    <ComboBoxItem>6</ComboBoxItem>
+                    <ComboBoxItem>7</ComboBoxItem>
+                    <ComboBoxItem>8</ComboBoxItem>
+                    <ComboBoxItem>9</ComboBoxItem>
+                </ComboBox>
+
+                <Button Name="btnNext" HorizontalAlignment="Left" Height="40" Content="Næste" Margin="846,98,0,0" VerticalAlignment="Top" Width="120" Click="btnNext_Click"/>
+
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="Confirm" Header="Bekræft">
+            <Grid Background="#FFE5E5E5" Margin="0,-5,0,5">
+                <Label Content="Film" HorizontalAlignment="Left" Margin="198,200,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,-0.385" Width="81"/>
+                <Label Content="Antal Biletter" HorizontalAlignment="Left" Margin="198,250,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,-0.385" Width="81"/>
+                <Label Content="Pris" HorizontalAlignment="Left" Margin="198,299,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.263,-0.385" Width="81"/>
+                <Label Name="lblMovie" Content="" HorizontalAlignment="Left" Margin="296,200,0,0" VerticalAlignment="Top" Width="112"/>
+                <Label Name="lblTickets" Content="" HorizontalAlignment="Left" Margin="296,250,0,0" VerticalAlignment="Top" Width="112"/>
+                <Label Name="lblPrice" Content="" HorizontalAlignment="Left" Margin="296,299,0,0" VerticalAlignment="Top" Width="112"/>
+                <Button Name="btnConfirm" Content="Bekræft" HorizontalAlignment="Left" Margin="351,371,0,0" VerticalAlignment="Top" Width="75" Click="btnConfirm_Click" />
+
+
+
+
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="Payment" Header="Betaling">
+            <Grid Background="#FFE5E5E5" Margin="0,-5,0,5">
+                <Button Name="btnPay" Content="Kontant" HorizontalAlignment="Left" Margin="531,448,0,0" VerticalAlignment="Top" Width="75" Click="btnPay_Click"/>
+            </Grid>
+        </TabItem>
+
+    </TabControl>
+
+</Window>

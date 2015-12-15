@@ -1,0 +1,76 @@
+﻿@using LuxBio.Library.Models.ExtraPropperties;
+@{
+    ViewBag.Title = "Home Page";
+    var chairs = (Chair[])ViewBag.Chairs;
+}
+
+
+<div id="Index">
+    
+    <div>
+        <div>
+            <img src="~/Image/Testbillede.jpg" alt="Alternate Text" height="200" width="200" />
+            <label>film title</label>
+        </div>
+
+        <div>
+
+            <label>Antal billeter</label>
+
+            <select id="ddlTickets">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+
+            </select>
+
+            <label>Pris</label>
+
+            <label>100-200 kr</label>
+
+            <label>Tidspunkt</label>
+
+            <label class="time">T1</label>
+            <label class="time">T2</label>
+
+        </div>
+
+    </div>
+
+    <div id="seats">
+        <ul>
+            @foreach (var c in chairs)
+            {
+                var cls = string.Empty;
+                switch (c.Available)
+                {
+                    case ChairAvailableType.Busy:
+                        cls = "IsReserved";
+                        break;
+                    case ChairAvailableType.Available:
+                        cls = "IsFree";
+                        break;
+                    case ChairAvailableType.OverTime:
+                        cls = "IsOvertime";
+                        break;
+                    case ChairAvailableType.Locked:
+                        cls = "IsReserved";
+                        break;
+                    default:
+                        break;
+                }
+
+                <li >
+                    <input class="@cls" type="checkbox" size="10" />
+                </li>
+            }
+        </ul>
+    </div>
+
+</div>

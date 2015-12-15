@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" />
+  <xs:complexType name="Chair">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" base="q1:Chair">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Available" type="tns:ChairAvailableType" />
+          <xs:element minOccurs="0" name="OrderNumber" type="xs:int" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Chair" nillable="true" type="tns:Chair" />
+  <xs:simpleType name="ChairAvailableType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Busy" />
+      <xs:enumeration value="Available" />
+      <xs:enumeration value="OverTime" />
+      <xs:enumeration value="Locked" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="ChairAvailableType" nillable="true" type="tns:ChairAvailableType" />
+  <xs:complexType name="ArrayOfChair">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Chair" nillable="true" type="tns:Chair" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfChair" nillable="true" type="tns:ArrayOfChair" />
+</xs:schema>

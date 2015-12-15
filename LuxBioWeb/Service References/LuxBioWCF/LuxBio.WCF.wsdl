@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://mycompany.com/LuxBio.WCF" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mycompany.com/LuxBio.WCF" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://mycompany.com/LuxBio.WCF/Imports">
+      <xsd:import namespace="http://mycompany.com/LuxBio.WCF" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/LuxBio.Library.Models.ExtraPropperties" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_GetAllMovies_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMovies" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllMovies_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllMoviesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMovie_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovie" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMovie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMovieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHall_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetHall" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetHall_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetHallResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMoviePlayTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoviePlayTime" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMoviePlayTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoviePlayTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMoviePlayTimes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoviePlayTimes" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetMoviePlayTimes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMoviePlayTimesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllChairsState_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChairsState" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetAllChairsState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllChairsStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateReserve_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReserve" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateReserve_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateReserveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_FindBestChairs_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindBestChairs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_FindBestChairs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindBestChairsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLockedChairs_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockedChairs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLockedChairs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockedChairsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LockChairs_InputMessage">
+    <wsdl:part name="parameters" element="tns:LockChairs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_LockChairs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LockChairsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLockedChairsForUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockedChairsForUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_GetLockedChairsForUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLockedChairsForUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReleaseLocked_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseLocked" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReleaseLocked_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseLockedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReleaseLockedWithCustomer_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseLockedWithCustomer" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReleaseLockedWithCustomer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseLockedWithCustomerResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_FindChairsByFirstSelected_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindChairsByFirstSelected" />
+  </wsdl:message>
+  <wsdl:message name="IService1_FindChairsByFirstSelected_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindChairsByFirstSelectedResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReleaseLockedByTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseLockedByTime" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ReleaseLockedByTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReleaseLockedByTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLockedChairs_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLockedChairs" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateLockedChairs_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateLockedChairsResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="GetAllMovies">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetAllMovies" message="tns:IService1_GetAllMovies_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetAllMoviesResponse" message="tns:IService1_GetAllMovies_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMovie">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetMovie" message="tns:IService1_GetMovie_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetMovieResponse" message="tns:IService1_GetMovie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetHall">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetHall" message="tns:IService1_GetHall_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetHallResponse" message="tns:IService1_GetHall_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoviePlayTime">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetMoviePlayTime" message="tns:IService1_GetMoviePlayTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetMoviePlayTimeResponse" message="tns:IService1_GetMoviePlayTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMoviePlayTimes">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetMoviePlayTimes" message="tns:IService1_GetMoviePlayTimes_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetMoviePlayTimesResponse" message="tns:IService1_GetMoviePlayTimes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllChairsState">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetAllChairsState" message="tns:IService1_GetAllChairsState_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetAllChairsStateResponse" message="tns:IService1_GetAllChairsState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateReserve">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/CreateReserve" message="tns:IService1_CreateReserve_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/CreateReserveResponse" message="tns:IService1_CreateReserve_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustomer">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetCustomer" message="tns:IService1_GetCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetCustomerResponse" message="tns:IService1_GetCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindBestChairs">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/FindBestChairs" message="tns:IService1_FindBestChairs_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/FindBestChairsResponse" message="tns:IService1_FindBestChairs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockedChairs">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetLockedChairs" message="tns:IService1_GetLockedChairs_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetLockedChairsResponse" message="tns:IService1_GetLockedChairs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LockChairs">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/LockChairs" message="tns:IService1_LockChairs_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/LockChairsResponse" message="tns:IService1_LockChairs_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLockedChairsForUser">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetLockedChairsForUser" message="tns:IService1_GetLockedChairsForUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/GetLockedChairsForUserResponse" message="tns:IService1_GetLockedChairsForUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseLocked">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/ReleaseLocked" message="tns:IService1_ReleaseLocked_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/ReleaseLockedResponse" message="tns:IService1_ReleaseLocked_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseLockedWithCustomer">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/ReleaseLockedWithCustomer" message="tns:IService1_ReleaseLockedWithCustomer_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/ReleaseLockedWithCustomerResponse" message="tns:IService1_ReleaseLockedWithCustomer_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindChairsByFirstSelected">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/FindChairsByFirstSelected" message="tns:IService1_FindChairsByFirstSelected_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/FindChairsByFirstSelectedResponse" message="tns:IService1_FindChairsByFirstSelected_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReleaseLockedByTime">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/ReleaseLockedByTime" message="tns:IService1_ReleaseLockedByTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/ReleaseLockedByTimeResponse" message="tns:IService1_ReleaseLockedByTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateLockedChairs">
+      <wsdl:input wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/UpdateLockedChairs" message="tns:IService1_UpdateLockedChairs_InputMessage" />
+      <wsdl:output wsaw:Action="http://mycompany.com/LuxBio.WCF/IService1/UpdateLockedChairsResponse" message="tns:IService1_UpdateLockedChairs_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

@@ -1,0 +1,14 @@
+﻿[
+  {
+    "outputFile": "Content/Site.css",
+    "inputFile": "Content/Site.scss"
+  },
+  {
+    "outputFile": "Content/StyleSheet1.css",
+    "inputFile": "Content/StyleSheet1.scss"
+  },
+  {
+    "outputFile": "Content/LuxBio.css",
+    "inputFile": "Content/LuxBio.scss"
+  }
+]

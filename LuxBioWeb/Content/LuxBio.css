@@ -1,0 +1,55 @@
+﻿body {
+  color: #fff; }
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal; }
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px; }
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+  white-space: normal; }
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+  max-width: 280px; }
+
+#Index > div:nth-of-type(1) {
+  width: 100%;
+  height: 250px; }
+  #Index > div:nth-of-type(1) > div:nth-of-type(1) {
+    height: 250px;
+    width: 250px;
+    margin: 20px 0px 0px 0px;
+    float: left; }
+    #Index > div:nth-of-type(1) > div:nth-of-type(1) > label {
+      width: 50%;
+      margin: 20px 0px 0px 0px;
+      float: left; }
+    #Index > div:nth-of-type(1) > div:nth-of-type(1) > label.time {
+      width: 10%;
+      margin: 20px 5px 0px 0px;
+      float: left;
+      background-color: green; }
+  #Index > div:nth-of-type(1) > div:nth-of-type(2) {
+    height: 250px;
+    width: 400px;
+    float: left; }
+    #Index > div:nth-of-type(1) > div:nth-of-type(2) > select {
+      margin: 20px 0px 0px 0px; }
+
+#Index > div:nth-of-type(2) > ul {
+  list-style-type: none;
+  margin: 40px 40px 40px 40px; }
+

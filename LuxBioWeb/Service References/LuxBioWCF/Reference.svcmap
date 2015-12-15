@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="20a8d991-ca89-4146-a3aa-533807c81a97" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies>
+      <ReferencedAssembly AssemblyName="LuxBio.Library.Models" />
+    </ReferencedAssemblies>
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="net.tcp://localhost:8523/LuxBio.WCF/Service1/mextcp" Protocol="mex" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="LuxBio.WCF.wsdl" MetadataType="Wsdl" ID="396d2eac-b9c7-44b3-b6aa-c5aa43673fc6" SourceId="1" SourceUrl="net.tcp://localhost:8523/LuxBio.WCF/Service1/mextcp" />
+    <MetadataFile FileName="service.wsdl" MetadataType="Wsdl" ID="6259b6bd-6abf-4cb2-a47e-912adb48fb92" SourceId="1" SourceUrl="net.tcp://localhost:8523/LuxBio.WCF/Service1/mextcp" />
+    <MetadataFile FileName="LuxBio.WCF.xsd" MetadataType="Schema" ID="029cfc30-783f-43e4-b749-f6da9dc24c5f" SourceId="1" SourceUrl="net.tcp://localhost:8523/LuxBio.WCF/Service1/mextcp" />
+    <MetadataFile FileName="service.xsd" MetadataType="Schema" ID="21afa77d-4f48-4822-b0b3-ba4e8ec3c359" SourceId="1" SourceUrl="net.tcp://localhost:8523/LuxBio.WCF/Service1/mextcp" />
+    <MetadataFile FileName="LuxBio.Library.Models.xsd" MetadataType="Schema" ID="c69a92e1-684f-4e0e-b347-2fa3b993d18e" SourceId="1" SourceUrl="net.tcp://localhost:8523/LuxBio.WCF/Service1/mextcp" />
+    <MetadataFile FileName="LuxBio.Library.Models.ExtraPropperties.xsd" MetadataType="Schema" ID="49babcc5-0bc0-4515-8202-0c158c4d554b" SourceId="1" SourceUrl="net.tcp://localhost:8523/LuxBio.WCF/Service1/mextcp" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

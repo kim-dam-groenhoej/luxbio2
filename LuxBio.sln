@@ -1,0 +1,125 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxBio.WindowsApp", "LuxBio\LuxBio.WindowsApp.csproj", "{C2C8230A-6702-4892-ACDA-CEE003A1017C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606} = {2ED0D75F-9BD2-4E52-9B08-D00263116606}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxBio.Website", "LuxBioWeb\LuxBio.Website.csproj", "{B9829AB9-CFF2-4590-A013-2C37CFE33667}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606} = {2ED0D75F-9BD2-4E52-9B08-D00263116606}
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1} = {00596CF2-F522-4EE4-A56B-9C1A6FD330E1}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxBio.Library", "LuxBio.Library\LuxBio.Library.csproj", "{7D359456-956C-4E2D-A98B-1D83E821CA82}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestLuxBio", "UnitTestLuxBio\UnitTestLuxBio.csproj", "{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606} = {2ED0D75F-9BD2-4E52-9B08-D00263116606}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxBio.WCF", "LuxBio.WCF\LuxBio.WCF.csproj", "{2ED0D75F-9BD2-4E52-9B08-D00263116606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxBio.WCFConsoleHost", "WCFConsoleHost\LuxBio.WCFConsoleHost.csproj", "{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LuxBio.Library.Models", "LuxBio.Library.Models\LuxBio.Library.Models.csproj", "{826223A3-4FDE-47A4-A6E3-718D375C53A7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Debug|x86.Build.0 = Debug|Any CPU
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Release|x86.ActiveCfg = Release|Any CPU
+		{C2C8230A-6702-4892-ACDA-CEE003A1017C}.Release|x86.Build.0 = Release|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Debug|x86.Build.0 = Debug|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Release|x86.ActiveCfg = Release|Any CPU
+		{B9829AB9-CFF2-4590-A013-2C37CFE33667}.Release|x86.Build.0 = Release|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Debug|x86.Build.0 = Debug|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Release|x86.ActiveCfg = Release|Any CPU
+		{7D359456-956C-4E2D-A98B-1D83E821CA82}.Release|x86.Build.0 = Release|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Debug|x86.Build.0 = Debug|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Release|x86.ActiveCfg = Release|Any CPU
+		{04110D91-CA26-4EED-8B98-00E0BF5E8BCA}.Release|x86.Build.0 = Release|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Debug|x86.Build.0 = Debug|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Release|x86.ActiveCfg = Release|Any CPU
+		{2ED0D75F-9BD2-4E52-9B08-D00263116606}.Release|x86.Build.0 = Release|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Debug|x86.Build.0 = Debug|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Release|x86.ActiveCfg = Release|Any CPU
+		{00596CF2-F522-4EE4-A56B-9C1A6FD330E1}.Release|x86.Build.0 = Release|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Debug|x86.Build.0 = Debug|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Release|x86.ActiveCfg = Release|Any CPU
+		{826223A3-4FDE-47A4-A6E3-718D375C53A7}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://luxbio2.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = LuxBioWeb\\LuxBio.Website.csproj
+		SccProjectName1 = LuxBioWeb
+		SccLocalPath1 = LuxBioWeb
+		SccProjectUniqueName2 = LuxBio\\LuxBio.WindowsApp.csproj
+		SccProjectName2 = LuxBio
+		SccLocalPath2 = LuxBio
+		SccProjectUniqueName3 = UnitTestLuxBio\\UnitTestLuxBio.csproj
+		SccProjectName3 = UnitTestLuxBio
+		SccLocalPath3 = UnitTestLuxBio
+		SccProjectUniqueName4 = LuxBio.Library\\LuxBio.Library.csproj
+		SccProjectName4 = LuxBio.Library
+		SccLocalPath4 = LuxBio.Library
+		SccProjectUniqueName5 = LuxBio.WCF\\LuxBio.WCF.csproj
+		SccProjectName5 = LuxBio.WCF
+		SccLocalPath5 = LuxBio.WCF
+		SccProjectUniqueName6 = WCFConsoleHost\\LuxBio.WCFConsoleHost.csproj
+		SccProjectName6 = WCFConsoleHost
+		SccLocalPath6 = WCFConsoleHost
+		SccProjectUniqueName7 = LuxBio.Library.Models\\LuxBio.Library.Models.csproj
+		SccProjectName7 = LuxBio.Library.Models
+		SccLocalPath7 = LuxBio.Library.Models
+	EndGlobalSection
+EndGlobal
